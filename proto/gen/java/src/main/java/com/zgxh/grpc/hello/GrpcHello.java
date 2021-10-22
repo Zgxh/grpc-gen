@@ -33,16 +33,18 @@ public final class GrpcHello {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\013hello.proto\022\005hello\"\034\n\014HelloRequest\022\014\n\004" +
-      "name\030\001 \001(\t\".\n\rHelloResponse\022\014\n\004code\030\001 \001(" +
-      "\005\022\017\n\007message\030\002 \001(\t2G\n\014HelloService\0227\n\010Sa" +
-      "yHello\022\023.hello.HelloRequest\032\024.hello.Hell" +
-      "oResponse\"\000B.\n\023com.zgxh.grpc.helloB\tGrpc" +
-      "HelloP\001Z\ngrpc/hellob\006proto3"
+      "\n\013hello.proto\022\005hello\032\034google/api/annotat" +
+      "ions.proto\"\034\n\014HelloRequest\022\014\n\004name\030\001 \001(\t" +
+      "\".\n\rHelloResponse\022\014\n\004code\030\001 \001(\005\022\017\n\007messa" +
+      "ge\030\002 \001(\t2Z\n\014HelloService\022J\n\010SayHello\022\023.h" +
+      "ello.HelloRequest\032\024.hello.HelloResponse\"" +
+      "\023\202\323\344\223\002\r\022\013/hello/testB.\n\023com.zgxh.grpc.he" +
+      "lloB\tGrpcHelloP\001Z\ngrpc/hellob\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.AnnotationsProto.getDescriptor(),
         });
     internal_static_hello_HelloRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -56,6 +58,12 @@ public final class GrpcHello {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_hello_HelloResponse_descriptor,
         new java.lang.String[] { "Code", "Message", });
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.AnnotationsProto.http);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
+    com.google.api.AnnotationsProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
