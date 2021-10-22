@@ -30,11 +30,11 @@ echo "deploy the java code to Nexus..."
 cd ./proto/gen/java
 mvn clean deploy
 
-# echo "commit and push the src to github..."
-# cd ../../../
-# git add .
-# git commit -m "update"
-# git push
+echo "commit and push the src to github..."
+cd ../../../
+git add .
+git commit -m "update"
+git push
 
 # echo "the grpc gateway server is starting..."
 # go mod tidy 
