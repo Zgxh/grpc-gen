@@ -6,7 +6,7 @@ import (
 	gojsonq "github.com/thedevsaddam/gojsonq/v2"
 )
 
-func getApis() []string {
+func GetApis() []string {
 	apis := make([]string, 0)
 	result, err := gojsonq.New().File("../gatewayApis.json").FindR("apis")
 	if err != nil {
