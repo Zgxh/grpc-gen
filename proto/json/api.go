@@ -1,4 +1,4 @@
-package jsonParse
+package json
 
 import (
 	"fmt"
