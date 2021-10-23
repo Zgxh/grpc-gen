@@ -1,4 +1,4 @@
-package json
+package main
 
 import (
 	"fmt"
@@ -12,10 +12,16 @@ func GetApis() []string {
 	if err != nil {
 		fmt.Println("failed to get apis fields")
 	}
+	fmt.Println(result)
 	err = result.As(&apis)
 	if err != nil {
 		fmt.Println("failed to get apis")
 	}
 
 	return apis
+}
+
+func main() {
+	apis := GetApis()
+	fmt.Println(apis)
 }
