@@ -1,4 +1,4 @@
-package main
+package json
 
 import (
 	"fmt"
@@ -19,9 +19,4 @@ func GetApis() []string {
 	}
 
 	return apis
-}
-
-func main() {
-	apis := GetApis()
-	fmt.Println(apis)
 }
