@@ -8,7 +8,7 @@ import (
 
 func GetApis() []string {
 	apis := make([]string, 0)
-	result, err := gojsonq.New().File("../gatewayApis.json").FindR("apis")
+	result, err := gojsonq.New().File("github.com/Zgxh/grpc-gen/proto/gatewayApis.json").FindR("apis")
 	if err != nil {
 		fmt.Println("failed to get apis fields")
 	}
