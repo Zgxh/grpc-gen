@@ -1,14 +1,17 @@
-package json
+package main
 
 import (
 	"fmt"
+	"os"
 
 	gojsonq "github.com/thedevsaddam/gojsonq/v2"
 )
 
-func GetApis() []string {
+func GetApis(version string) []string {
 	apis := make([]string, 0)
-	result, err := gojsonq.New().File("github.com/Zgxh/grpc-gen/proto/gatewayApis.json").FindR("apis")
+	goPath := os.Getenv("GOPATH")
+	fmt.Println(goPath)
+	result, err := gojsonq.New().File(goPath + "/pkg/mod/github.com/!zgxh/grpc-gen@" + version + "/proto/gatewayApis.json").FindR("apis")
 	if err != nil {
 		fmt.Println("failed to get apis fields")
 	}
@@ -19,4 +22,8 @@ func GetApis() []string {
 	}
 
 	return apis
+}
+
+func main() {
+	GetApis("v1.0.4")
 }
