@@ -35,11 +35,3 @@ cd ../../../
 git add .
 git commit -m "update"
 git push
-
-# echo "the grpc gateway server is starting..."
-# go mod tidy 
-# go run run.go 
-
-# echo "service is starting..."
-# go mod tidy
-# go run ./server/main.go
