@@ -1,4 +1,4 @@
-package main
+package json
 
 import (
 	"fmt"
@@ -22,8 +22,4 @@ func GetApis(version string) []string {
 	}
 
 	return apis
-}
-
-func main() {
-	GetApis("v1.0.4")
 }
